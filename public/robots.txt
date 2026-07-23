@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://www.talentoinutilnumero13.com/sitemap.xmlgit add .
+Sitemap: https://www.talentoinutilnumero13.com/sitemap.xml
