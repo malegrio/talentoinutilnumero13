@@ -1,0 +1,467 @@
+.admin-page {
+    height:100vh;
+    display:grid;
+    grid-template-columns:300px 1fr;
+    background:#fff;
+}
+
+.admin-panel{
+    padding:10px;
+    border-right:1px solid #e8e8e8;
+    overflow-y:auto;
+}
+
+.admin-title{
+    display:flex;
+    align-items:center;
+    justify-content:flex-start;
+    gap:14px;
+    margin-bottom:10px;
+}
+
+.admin-separador{
+    width:1px;
+    height:12px;
+    background:#d9d9d9;
+}
+
+.admin-title strong{
+    font-size:11px;
+    font-weight:700;
+}
+
+.admin-title span{
+    color:#666;
+    font-size:10px;
+}
+
+.admin-section{
+    margin-bottom:3px;
+}
+
+.admin-section h2{
+    margin:0 0 14px;
+    font-size:13px;
+    font-weight:700;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.admin-input{
+    width:100%;
+    height:25px;
+    margin-bottom:12px;
+    padding:0 12px;
+    border:1px solid #dddddd;
+    background:white;
+    font-size:12px;
+}
+
+.admin-check{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    font-size:11px;
+}
+
+.admin-preview-empty{
+    height:150px;
+    border:1px solid #e5e5e5;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#888;
+    margin-bottom:10px;
+}
+.admin-info{
+    margin:14px 0 16px;
+}
+
+.admin-info-row{
+    display:flex;
+    gap:6px;
+    margin-bottom:6px;
+
+    font-size:12px;
+}
+
+.admin-info-label{
+    color:#888;
+    font-weight:500;
+    min-width:52px;
+}
+
+.admin-info-value{
+    color:#111;
+}
+
+.admin-buttons{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:6px;
+    margin-bottom:18px;
+}
+
+
+.admin-tool-button{
+    width:30px;
+    height:30px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid #dddddd;
+    background:white;
+    cursor:pointer;
+    font-size:14px;
+    transition:.2s;
+}
+
+.admin-tool-button:hover{
+    background:#f5f5f5;
+}
+
+.admin-danger{
+    color:#d94141;
+    border-color:#d94141;
+}
+
+.admin-matriz{
+    padding:15px;
+    height:100vh;
+    overflow-y:auto;
+}
+
+.admin-matriz h2{
+    margin:0 0 18px;
+    font-size:13px;
+    letter-spacing:.08em;
+    text-transform:uppercase;
+}
+
+.admin-grid{
+    display:grid;
+    grid-template-columns:repeat(20, 1fr);
+    gap:2px;
+}
+
+.admin-grid{
+    width:100%;
+    display:grid;
+    grid-template-columns:repeat(auto-fill, minmax(34px, 1fr));
+    gap:2px;
+}
+
+.admin-casilla{
+    aspect-ratio:3 / 2;
+    border:1px solid #e5e5e5;
+    background:white;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:8px;
+    color:#777;
+    cursor:pointer;
+    min-width:0;
+}
+
+.admin-casilla:hover{
+    border-color:#111;
+}
+.admin-preview-img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.admin-casilla-img {
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+.admin-casilla-activa {
+    border:2px solid #111;
+}
+.admin-info-two{
+    justify-content:space-between;
+}
+
+.admin-info-address{
+    margin-top:6px;
+    font-size:12px;
+    color:#111;
+    line-height:1.35;
+}
+/* ===== ESTADOS ===== */
+
+.admin-status{
+    display:flex;
+    justify-content:space-between;
+    gap:6px;
+    margin:14px 0 16px;
+}
+
+.admin-status-button{
+
+    flex:1;
+
+    height:26px;
+
+    border:1px solid #d9d9d9;
+    background:#f7f7f7;
+
+    font-size:11px;
+    font-weight:600;
+
+    border-radius:4px;
+
+    cursor:pointer;
+
+    opacity:.35;
+
+    transition:.2s;
+}
+
+/* ENVIADA */
+
+.status-enviada.active{
+    background:#2db44a;
+    border-color:#2db44a;
+    color:white;
+    opacity:1;
+}
+
+/* SUBIDA */
+
+.status-subida.active{
+    background:#2b78ff;
+    border-color:#2b78ff;
+    color:white;
+    opacity:1;
+}
+
+/* BLOQUEADA */
+
+.status-bloqueada.active{
+    background:#ff9800;
+    border-color:#ff9800;
+    color:white;
+    opacity:1;
+}
+.admin-info-icon{
+    vertical-align:middle;
+    margin-right:4px;
+    color:#777;
+}
+.admin-info-address-line{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:8px;
+}
+
+.admin-lock-button{
+    width:24px;
+    height:24px;
+    border:none;
+    background:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    color:#777;
+    padding:0;
+}
+
+.admin-lock-button:hover{
+    color:#111;
+}
+.admin-address-input{
+    width:100%;
+    height:26px;
+    border:1px solid #dddddd;
+    padding:0 8px;
+    font-size:12px;
+}
+
+.admin-save-button{
+    width:100%;
+    height:28px;
+    margin-top:8px;
+    border:1px solid #111;
+    background:#111;
+    color:white;
+    font-size:12px;
+    cursor:pointer;
+}
+.admin-edit-line{
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+
+.admin-small-input{
+  width:92px;
+  height:22px;
+  border:1px solid #dddddd;
+  font-size:11px;
+  padding:0 4px;
+}
+/* ---------- Estados de las casillas ---------- */
+
+.admin-casilla-enviada{
+    border:2px solid #2e8b57;
+}
+
+.admin-casilla-subida{
+    border:2px solid #2f80ed;
+}
+
+.admin-casilla-bloqueada{
+    border:2px solid #ff9800;
+}
+
+.admin-casilla-activa{
+    outline:3px solid white;
+    z-index:2;
+}
+.admin-filtros-linea{
+    display:flex;
+    gap:8px;
+}
+
+.admin-input-codigo{
+    flex:1;
+}
+
+.admin-input-estado{
+    width:105px;
+}
+
+.admin-input-ciudad{
+    width:100%;
+}
+.admin-toolbar{
+    width:100%;
+    height:34px;
+    display:flex;
+    background:#e5e5e5;
+    border:1px solid #d5d5d5;
+    margin-top:12px;
+    overflow:hidden;
+}
+
+.admin-toolbar-button{
+    flex:1;
+    border:none;
+    border-right:1px solid #d0d0d0;
+    background:transparent;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    font-size:15px;
+    color:#333;
+}
+
+.admin-toolbar-button:last-child{
+    border-right:none;
+}
+
+.admin-toolbar-button:hover{
+    background:#d8d8d8;
+}
+
+.admin-toolbar-danger{
+    color:#c63b3b;
+}
+
+.admin-toolbar-danger:hover{
+    background:#f2d6d6;
+}
+
+.admin-modal-fondo{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.35);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+}
+
+.admin-modal{
+    width:320px;
+    background:white;
+    border:1px solid #ddd;
+    padding:22px;
+    box-shadow:0 12px 40px rgba(0,0,0,.18);
+}
+
+.admin-modal h3{
+    margin:0 0 14px;
+    font-size:15px;
+}
+
+.admin-modal p{
+    margin:0 0 10px;
+    font-size:13px;
+    line-height:1.4;
+    color:#444;
+}
+
+.admin-modal-actions{
+    display:flex;
+    gap:10px;
+    margin-top:18px;
+}
+
+.admin-modal-cancel,
+.admin-modal-delete{
+    flex:1;
+    height:34px;
+    border:1px solid #ccc;
+    background:white;
+    cursor:pointer;
+    font-size:13px;
+}
+
+.admin-modal-delete{
+    border-color:#c63b3b;
+    background:#c63b3b;
+    color:white;
+}
+.admin-toolbar-save{
+    color:#1f7a3a;
+}
+
+.admin-toolbar-save:hover{
+    background:#d8eadc;
+}
+
+.admin-toolbar-button:disabled{
+    opacity:.35;
+    cursor:not-allowed;
+}
+.admin-image-viewer{
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.92);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  cursor: pointer;
+  padding: 24px;
+}
+
+.admin-image-viewer-img{
+  max-width: 92vw;
+  max-height: 92vh;
+  object-fit: contain;
+  display: block;
+  cursor: default;
+}
