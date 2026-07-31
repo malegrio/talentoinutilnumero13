@@ -1,0 +1,165 @@
+/* ##########################################################################
+#
+#  FONDO OSCURO
+#
+########################################################################### */
+
+.pantalla-gracias-fondo-oscuro {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+
+  background: rgba(0, 0, 0, 0.78);
+}
+
+
+/* ##########################################################################
+#
+#  VENTANA
+#
+########################################################################### */
+
+.pantalla-gracias-ventana {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 620px;
+  height: 420px;
+  min-height: 420px;
+  max-height: 420px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+  box-sizing: border-box;
+
+  background: #b3b2b2;
+}
+
+
+/* ##########################################################################
+#
+#  CONTENEDOR
+#
+########################################################################### */
+
+.pantalla-gracias-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 28px;
+
+  width: 100%;
+  height: 100%;
+
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+
+/* ##########################################################################
+#
+#  TEXTO
+#
+########################################################################### */
+
+.pantalla-gracias-texto {
+  margin: 0;
+
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.6;
+  font-weight: 400;
+  text-align: center;
+
+  color: #111111;
+}
+
+.pantalla-gracias-texto:first-child {
+  max-width: 460px;
+}
+
+.pantalla-gracias-texto:last-child {
+  font-size: 13px;
+  font-weight: 600;
+}
+/* ##########################################################################
+#
+#  BOTÓN VER MATRIZ
+#
+########################################################################### */
+
+.pantalla-gracias-boton {
+  width: 180px;
+  min-height: 50px;
+  padding: 12px 18px;
+
+  border: 1px solid #3e3e3e;
+  border-radius: 0;
+
+  background: #9b9b9b;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.pantalla-gracias-boton:hover {
+  background: #2a2a2a;
+}
+
+.pantalla-gracias-boton:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 3px;
+}
+
+/* ##########################################################################
+#
+#  ADAPTACIÓN MÓVIL
+#
+########################################################################### */
+
+@media (max-width: 640px) {
+
+  .pantalla-gracias-fondo-oscuro {
+    align-items: flex-start;
+    padding: 14px;
+  }
+
+  .pantalla-gracias-ventana {
+    width: 100%;
+    height: 420px;
+    min-height: 420px;
+    max-height: 420px;
+  }
+
+  .pantalla-gracias-contenedor {
+    padding: 24px;
+    gap: 20px;
+  }
+
+  .pantalla-gracias-texto {
+    font-size: 16px;
+  }
+
+  .pantalla-gracias-texto:last-child {
+    font-size: 22px;
+  }
+
+}

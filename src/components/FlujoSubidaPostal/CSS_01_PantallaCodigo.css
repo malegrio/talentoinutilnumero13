@@ -1,0 +1,489 @@
+/* ##########################################################################
+#
+#  FONDO OSCURO
+#
+########################################################################### */
+
+.pantalla-codigo-fondo-oscuro {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+
+  background: rgba(0, 0, 0, 0.78);
+}
+
+
+/* ##########################################################################
+#
+#  VENTANA
+#
+########################################################################### */
+
+.pantalla-codigo-ventana {
+  display: flex;
+  flex-direction: column;
+
+  width: 620px;
+  height: 420px;
+  min-height: 420px;
+  max-height: 420px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  background: #b3b2b2;
+  border-radius: 0;
+}
+
+
+/* ##########################################################################
+#
+#  CONTENEDOR SUPERIOR
+#
+########################################################################### */
+
+.pantalla-codigo-contenedor-superior {
+  width: 100%;
+  height: 240px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   TEXTO
+========================================================== */
+
+.pantalla-codigo-textos {
+  width: 100%;
+  height: 100%;
+
+  box-sizing: border-box;
+}
+
+.pantalla-codigo-texto {
+  width: 100%;
+  margin: 18px 0 0;
+  padding: 0 50px;
+
+  box-sizing: border-box;
+
+  font-size: 13px;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+
+  color: #111111;
+}
+
+.pantalla-codigo-texto:first-of-type {
+  margin-top: 30px;
+}
+
+
+/* ==========================================================
+   FOTOS
+========================================================== */
+
+
+/* ##########################################################################
+#
+#  CONTENEDOR CENTRAL
+#
+########################################################################### */
+
+.pantalla-codigo-contenedor-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  height: 155px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   ESTADO
+========================================================== */
+
+.pantalla-codigo-estado {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+
+  width: 100%;
+  min-height: 45px;
+
+  box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------
+   ICONO
+---------------------------------------------------------- */
+
+.pantalla-codigo-icono {
+  display: block;
+
+  width: 18px;
+  height: 18px;
+  margin: 0;
+}
+
+.pantalla-codigo-icono-cargando {
+  animation: pantalla-codigo-girar 0.9s linear infinite;
+}
+
+/* ----------------------------------------------------------
+   ICONO VACÍO / INCOMPLETO
+---------------------------------------------------------- */
+
+.pantalla-codigo-icono-vacio {
+  color: #c8c8c8;
+}
+
+.pantalla-codigo-icono-valido {
+  color: #2f7d32;
+}
+
+.pantalla-codigo-icono-error {
+  color: #a83232;
+}
+
+
+/* ----------------------------------------------------------
+   MENSAJE
+---------------------------------------------------------- */
+
+.pantalla-codigo-mensaje {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.35;
+  font-weight: 500;
+  text-align: center;
+
+  color: #444444;
+}
+
+
+/* ==========================================================
+   BARRA DE ACCIONES
+========================================================== */
+
+.pantalla-codigo-acciones {
+  display: grid;
+  grid-template-columns: 1fr 180px 1fr;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  min-height: 60px;
+  padding: 0 20px;
+
+  box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------
+   BOTÓN IZQUIERDA
+---------------------------------------------------------- */
+
+.pantalla-codigo-acciones-izquierda {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
+
+/* ----------------------------------------------------------
+   CAJA CÓDIGO
+---------------------------------------------------------- */
+
+.pantalla-codigo-acciones-centro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 180px;
+}
+
+.pantalla-codigo-input {
+  display: block;
+
+  width: 180px;
+  height: 50px;
+  margin: 0;
+  padding: 0 18px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #7a7a7a;
+  border-radius: 0;
+  outline: none;
+
+  background: #ffffff;
+
+  font-family: inherit;
+  font-size: 20px;
+  line-height: 1;
+  font-weight: 600;
+  letter-spacing: 8px;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #111111;
+}
+
+.pantalla-codigo-input::placeholder {
+  letter-spacing: 2px;
+  font-size: 15px;
+  font-weight: 400;
+
+  color: #9a9a9a;
+}
+
+.pantalla-codigo-input:focus {
+  border-color: #111111;
+}
+
+.pantalla-codigo-input:disabled {
+  cursor: wait;
+
+  background: #f1f1f1;
+  color: #666666;
+}
+
+
+/* ----------------------------------------------------------
+   BOTÓN CONTINUAR
+---------------------------------------------------------- */
+
+.pantalla-codigo-acciones-derecha {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+}
+
+.pantalla-codigo-boton {
+  width: 180px;
+  min-height: 50px;
+  padding: 12px 18px;
+
+  border: 1px solid #3e3e3e;
+  border-radius: 0;
+
+  background: #9b9b9b;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.pantalla-codigo-boton:hover {
+  background: #2a2a2a;
+}
+
+.pantalla-codigo-boton:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 3px;
+}
+
+
+/* ##########################################################################
+#
+#  CONTENEDOR INFERIOR
+#
+########################################################################### */
+
+.pantalla-codigo-contenedor-inferior {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 25px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   BOTÓN CANCELAR
+========================================================== */
+
+.pantalla-codigo-cancelar {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-decoration: underline;
+
+  color: #666666;
+
+  cursor: pointer;
+}
+
+.pantalla-codigo-cancelar:hover {
+  color: #111111;
+}
+
+.pantalla-codigo-cancelar:disabled {
+  cursor: wait;
+  opacity: 0.45;
+}
+
+
+/* ##########################################################################
+#
+#  ANIMACIÓN
+#
+########################################################################### */
+
+@keyframes pantalla-codigo-girar {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ##########################################################################
+#
+#  ADAPTACIÓN MÓVIL
+#
+########################################################################### */
+
+@media (max-width: 640px) {
+
+  /* ========================================================
+     FONDO OSCURO
+  ======================================================== */
+
+  .pantalla-codigo-fondo-oscuro {
+    align-items: flex-start;
+
+    padding: 14px;
+  }
+
+
+  /* ========================================================
+     VENTANA
+  ======================================================== */
+
+  .pantalla-codigo-ventana {
+    width: 100%;
+    max-height: calc(100vh - 28px);
+  }
+
+
+  /* ========================================================
+     CONTENEDOR SUPERIOR
+  ======================================================== */
+
+  .pantalla-codigo-texto {
+    padding: 0 24px;
+  }
+
+
+  /* ========================================================
+     CONTENEDOR CENTRAL
+  ======================================================== */
+
+  /* --------------------------------------------------------
+     ESTADO
+  -------------------------------------------------------- */
+
+  .pantalla-codigo-mensaje {
+    font-size: 13px;
+  }
+
+
+  /* --------------------------------------------------------
+     BARRA DE ACCIONES
+  -------------------------------------------------------- */
+
+  .pantalla-codigo-acciones {
+    grid-template-columns: 1fr 180px 1fr;
+
+    padding: 0 10px;
+  }
+
+
+  /* --------------------------------------------------------
+     CAJA CÓDIGO
+  -------------------------------------------------------- */
+
+  .pantalla-codigo-input {
+    height: 50px;
+
+    font-size: 18px;
+    letter-spacing: 6px;
+  }
+
+
+  /* --------------------------------------------------------
+     BOTÓN CONTINUAR
+  -------------------------------------------------------- */
+
+  .pantalla-codigo-boton {
+    width: auto;
+    min-height: 50px;
+    padding: 12px;
+  }
+
+
+  /* ========================================================
+     CONTENEDOR INFERIOR
+  ======================================================== */
+
+  /* --------------------------------------------------------
+     BOTÓN CANCELAR
+  -------------------------------------------------------- */
+
+  .pantalla-codigo-cancelar span {
+    display: none;
+  }
+}

@@ -19,7 +19,15 @@ type CasillaBD = {
   bloqueada: boolean | null;
 };
 
-function Matriz() {
+type Props = {
+  casillaRecienPublicada: number | null;
+  onCasillaProcesada: () => void;
+};
+
+function Matriz({
+  casillaRecienPublicada,
+  onCasillaProcesada,
+}: Props) {
   const navigate = useNavigate();
   const { numero } = useParams();
 
@@ -64,10 +72,39 @@ function Matriz() {
     cargarCasillas();
   }, []);
 
+  useEffect(() => {
+    if (!casillaRecienPublicada) return;
+
+    async function recargarCasillas() {
+      const { data, error } = await supabase
+        .from("casillas")
+        .select("numero, url, ciudad, fecha_subida, publicada, bloqueada")
+        .eq("publicada", true)
+        .eq("bloqueada", false);
+
+      if (error) {
+        console.error(error);
+        return;
+      }
+
+      setCasillasBD(data || []);
+      navigate(`/${casillaRecienPublicada}`);
+      onCasillaProcesada();
+    }
+
+    recargarCasillas();
+  }, [
+    casillaRecienPublicada,
+    navigate,
+    onCasillaProcesada,
+  ]);
+
   const casillas: Casilla[] = [];
 
   for (let i = 1; i <= 1000; i++) {
-    const casillaBD = casillasBD.find((casilla) => casilla.numero === i);
+    const casillaBD = casillasBD.find(
+      (casilla) => casilla.numero === i
+    );
 
     casillas.push({
       numero: i,
@@ -79,12 +116,16 @@ function Matriz() {
 
   const casillaActual =
     casillaAbierta !== null
-      ? casillas.find((casilla) => casilla.numero === casillaAbierta)
+      ? casillas.find(
+          (casilla) => casilla.numero === casillaAbierta
+        )
       : null;
 
   useEffect(() => {
     if (numero) {
       setCasillaAbierta(Number(numero));
+    } else {
+      setCasillaAbierta(null);
     }
   }, [numero]);
 
@@ -143,7 +184,11 @@ function Matriz() {
             onClick={() => navigate(`/${casilla.numero}`)}
           >
             {casilla.foto ? (
-              <img src={casilla.foto} className="foto-casilla" alt="" />
+              <img
+                src={casilla.foto}
+                className="foto-casilla"
+                alt=""
+              />
             ) : (
               casilla.numero
             )}
@@ -159,26 +204,54 @@ function Matriz() {
             navigate("/");
           }}
         >
-          <div className="ventana-visor" onClick={(e) => e.stopPropagation()}>
-            <button className="zona-click zona-izquierda" onClick={irAnterior} />
-            <button className="zona-click zona-derecha" onClick={irSiguiente} />
+          <div
+            className="ventana-visor"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <button
+              className="zona-click zona-izquierda"
+              onClick={irAnterior}
+            />
+
+            <button
+              className="zona-click zona-derecha"
+              onClick={irSiguiente}
+            />
 
             {casillaActual.foto ? (
-              <img src={casillaActual.foto} alt="" className="visor-foto-img" />
+              <img
+                src={casillaActual.foto}
+                alt=""
+                className="visor-foto-img"
+              />
             ) : (
-              <div className="casilla-vacia-visor">{casillaActual.numero}</div>
+              <div className="casilla-vacia-visor">
+                {casillaActual.numero}
+              </div>
             )}
           </div>
 
-          <div className="info-visor" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="info-visor"
+            onClick={(event) => event.stopPropagation()}
+          >
             <div className="datos-visor">
               {casillaActual.numero}
-              {casillaActual.ciudad && <> · {casillaActual.ciudad}</>}
-              {fechaFormateada && <> · {fechaFormateada}</>}
+
+              {casillaActual.ciudad && (
+                <> · {casillaActual.ciudad}</>
+              )}
+
+              {fechaFormateada && (
+                <> · {fechaFormateada}</>
+              )}
             </div>
 
             <div className="iconos-visor">
-              <button className="boton-icono-visor" onClick={compartir}>
+              <button
+                className="boton-icono-visor"
+                onClick={compartir}
+              >
                 <IoShareSocialOutline />
               </button>
             </div>

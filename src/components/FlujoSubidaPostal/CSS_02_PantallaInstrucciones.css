@@ -1,0 +1,425 @@
+/* ##########################################################################
+#
+#  FONDO OSCURO
+#
+########################################################################### */
+
+.pantalla-buscar-postal-fondo-oscuro {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  min-height: 100vh;
+  padding: 24px;
+
+  background: rgba(0, 0, 0, 0.78);
+}
+
+
+/* ##########################################################################
+#
+#  VENTANA
+#
+########################################################################### */
+
+.pantalla-buscar-postal-ventana {
+  display: flex;
+  flex-direction: column;
+
+  width: 620px;
+  height: 420px;
+  min-height: 420px;
+  max-height: 420px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+
+  background: #b3b2b2;
+  border-radius: 0;
+}
+
+
+/* ##########################################################################
+#
+#  CONTENEDOR SUPERIOR
+#
+########################################################################### */
+
+.pantalla-buscar-postal-contenedor-superior {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  align-items: center;
+  gap: 20px;
+
+  width: 100%;
+  height: 240px;
+
+  margin: 0;
+  padding: 20px 30px 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   FOTO
+========================================================== */
+
+.pantalla-buscar-postal-foto {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 360px;
+  height: 205px;
+
+  margin: 0;
+  padding: 0;
+
+  overflow: hidden;
+
+  box-sizing: border-box;
+}
+
+.pantalla-buscar-postal-imagen {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+}
+
+
+/* ==========================================================
+   TEXTO
+========================================================== */
+
+.pantalla-buscar-postal-textos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 18px;
+
+  width: 100%;
+  height: 205px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+.pantalla-buscar-postal-texto {
+  width: 100%;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 400;
+  text-align: left;
+
+  color: #111111;
+}
+
+.pantalla-buscar-postal-texto:last-of-type {
+  font-weight: 600;
+}
+
+
+/* ##########################################################################
+#
+#  CONTENEDOR CENTRAL
+#
+########################################################################### */
+
+.pantalla-buscar-postal-contenedor-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 155px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   BARRA DE ACCIONES
+========================================================== */
+
+.pantalla-buscar-postal-acciones {
+  display: grid;
+  grid-template-columns: 1fr 180px 1fr;
+  align-items: center;
+  gap: 10px;
+
+  width: 100%;
+  min-height: 60px;
+
+  margin: 0;
+  padding: 0 20px;
+
+  box-sizing: border-box;
+}
+
+
+/* ----------------------------------------------------------
+   ZONA IZQUIERDA
+---------------------------------------------------------- */
+
+.pantalla-buscar-postal-acciones-izquierda {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  width: 100%;
+}
+
+
+/* ----------------------------------------------------------
+   BOTÓN BUSCAR POSTAL
+---------------------------------------------------------- */
+
+.pantalla-buscar-postal-acciones-centro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 180px;
+}
+
+.pantalla-buscar-postal-boton {
+  width: 180px;
+  min-height: 50px;
+  padding: 12px 18px;
+
+  border: 1px solid #3e3e3e;
+  border-radius: 0;
+
+  background: #9b9b9b;
+
+  font-family: inherit;
+  font-size: 16px;
+  line-height: 1.2;
+  font-weight: 500;
+  
+
+  color: #ffffff;
+
+  cursor: pointer;
+}
+
+.pantalla-buscar-postal-boton:hover {
+  background: #2a2a2a;
+}
+
+.pantalla-buscar-postal-boton:focus-visible {
+  outline: 2px solid #111111;
+  outline-offset: 3px;
+}
+
+
+/* ----------------------------------------------------------
+   SELECTOR DE ARCHIVO
+---------------------------------------------------------- */
+
+.pantalla-buscar-postal-selector {
+  display: none;
+}
+
+
+/* ----------------------------------------------------------
+   ZONA DERECHA
+---------------------------------------------------------- */
+
+.pantalla-buscar-postal-acciones-derecha {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
+  width: 100%;
+}
+
+
+/* ##########################################################################
+#
+#  CONTENEDOR INFERIOR
+#
+########################################################################### */
+
+.pantalla-buscar-postal-contenedor-inferior {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 25px;
+
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+
+/* ==========================================================
+   BOTÓN CANCELAR
+========================================================== */
+
+.pantalla-buscar-postal-cancelar {
+  margin: 0;
+  padding: 0;
+
+  border: 0;
+  background: transparent;
+
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.4;
+  font-weight: 400;
+  text-decoration: underline;
+
+  color: #666666;
+
+  cursor: pointer;
+}
+
+.pantalla-buscar-postal-cancelar:hover {
+  color: #111111;
+}
+
+.pantalla-buscar-postal-cancelar:disabled {
+  cursor: wait;
+  opacity: 0.45;
+}
+
+
+/* ##########################################################################
+#
+#  ADAPTACIÓN MÓVIL
+#
+########################################################################### */
+
+@media (max-width: 640px) {
+
+  /* ========================================================
+     FONDO OSCURO
+  ======================================================== */
+
+  .pantalla-buscar-postal-fondo-oscuro {
+    align-items: flex-start;
+
+    padding: 14px;
+  }
+
+
+  /* ========================================================
+     VENTANA
+  ======================================================== */
+
+  .pantalla-buscar-postal-ventana {
+    width: 100%;
+    height: 420px;
+    min-height: 420px;
+    max-height: 420px;
+
+    overflow: hidden;
+  }
+
+
+  /* ========================================================
+     CONTENEDOR SUPERIOR
+  ======================================================== */
+
+  .pantalla-buscar-postal-contenedor-superior {
+    grid-template-columns: 46% 1fr;
+    gap: 12px;
+
+    padding: 18px 18px 0;
+  }
+
+
+  /* --------------------------------------------------------
+     FOTO
+  -------------------------------------------------------- */
+
+  .pantalla-buscar-postal-foto {
+    width: 100%;
+    height: 190px;
+  }
+
+
+  /* --------------------------------------------------------
+     TEXTO
+  -------------------------------------------------------- */
+
+  .pantalla-buscar-postal-textos {
+    height: 190px;
+    gap: 10px;
+  }
+
+  .pantalla-buscar-postal-texto {
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+
+  /* ========================================================
+     CONTENEDOR CENTRAL
+  ======================================================== */
+
+  /* --------------------------------------------------------
+     BARRA DE ACCIONES
+  -------------------------------------------------------- */
+
+  .pantalla-buscar-postal-acciones {
+    grid-template-columns: 1fr 180px 1fr;
+
+    padding: 0 10px;
+  }
+
+
+  /* --------------------------------------------------------
+     BOTÓN BUSCAR POSTAL
+  -------------------------------------------------------- */
+
+  .pantalla-buscar-postal-boton {
+    width: 180px;
+    min-height: 50px;
+    padding: 12px;
+
+    font-size: 15px;
+  }
+
+
+  /* ========================================================
+     CONTENEDOR INFERIOR
+  ======================================================== */
+
+  /* --------------------------------------------------------
+     BOTÓN CANCELAR
+  -------------------------------------------------------- */
+
+  .pantalla-buscar-postal-cancelar span {
+    display: none;
+  }
+}
