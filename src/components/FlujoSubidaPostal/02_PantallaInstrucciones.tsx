@@ -59,19 +59,26 @@ export default function PantallaBuscarPostal({
   ======================================================== */
 
   function seleccionarFoto(
-    evento: ChangeEvent<HTMLInputElement>
-  ) {
-    const foto =
-      evento.target.files?.[0];
+  evento: ChangeEvent<HTMLInputElement>
+) {
+  const foto =
+    evento.target.files?.[0];
 
-    if (!foto) {
-      return;
-    }
+  if (!foto) {
+    return;
+  }
 
-    onSeleccionarFoto(foto);
+  if (!foto.type.startsWith("image/")) {
+    alert("Solo puedes seleccionar archivos de imagen.");
 
     evento.target.value = "";
+    return;
   }
+
+  onSeleccionarFoto(foto);
+
+  evento.target.value = "";
+}
 
 
   /* ========================================================
