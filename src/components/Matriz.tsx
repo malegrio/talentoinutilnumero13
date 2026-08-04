@@ -34,24 +34,38 @@ function Matriz({
   const [casillaAbierta, setCasillaAbierta] = useState<number | null>(null);
   const [casillasBD, setCasillasBD] = useState<CasillaBD[]>([]);
 
-  const urlActual = casillaAbierta
-    ? `${window.location.origin}/${casillaAbierta}`
-    : window.location.origin;
+  const dominioPublico =
+  "https://www.talentoinutilnumero13.com";
+
+const urlActual = casillaAbierta
+  ? `${dominioPublico}/${casillaAbierta}`
+  : dominioPublico;
 
   async function compartir() {
-    if (!casillaAbierta) return;
+  if (!casillaAbierta) {
+    return;
+  }
 
+  try {
     if (navigator.share) {
       await navigator.share({
         title: `Postal ${casillaAbierta}`,
         text: "Mira esta postal",
         url: urlActual,
       });
-    } else {
-      await navigator.clipboard.writeText(urlActual);
-      alert("Enlace copiado al portapapeles");
+
+      return;
     }
+
+    await navigator.clipboard.writeText(urlActual);
+
+    alert(
+      `Enlace copiado al portapapeles:\n\n${urlActual}`
+    );
+  } catch (error) {
+    console.error("No se pudo compartir el enlace:", error);
   }
+}
 
   useEffect(() => {
     async function cargarCasillas() {
