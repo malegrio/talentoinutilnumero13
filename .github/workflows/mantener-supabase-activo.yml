@@ -1,0 +1,28 @@
+
+name: Mantener Supabase activo
+
+on:
+  schedule:
+    - cron: '17 8 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  consultar-supabase:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: Consultar base de datos
+        env:
+          SUPABASE_URL: ${{ secrets.SUPABASE_DIRECCION_DEL_PROYECTO }}
+          SUPABASE_KEY: ${{ secrets.SUPABASE_CLAVE_PUBLICA }}
+        run: |
+          curl --fail-with-body --silent --show-error \
+            --retry 3 \
+            --max-time 30 \
+            -H "apikey: $SUPABASE_KEY" \
+            -H "Authorization: Bearer $SUPABASE_KEY" \
+            "$SUPABASE_URL/rest/v1/casillas?select=codigo&limit=1"
